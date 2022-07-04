@@ -4,9 +4,12 @@
 <p align = "center"> <img width="525" alt="Course Logo" src="https://user-images.githubusercontent.com/15366184/177063597-f209f0fb-9271-4933-ba64-48d6264f496a.png"></p>
 
 ## Badges
-<p align="center"> <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
-<img src="http://img.shields.io/static/v1?label=LANGUAGES&message=SWIFT&color=blue&style=for-the-badge"/>
-<img src="http://img.shields.io/static/v1?label=PLATAFORM&message=IOS&color=lightgray&style=for-the-badge"/>
+<p align="center"> <img src="http://img.shields.io/static/v1?label=STATUS&message=DEVELOPING&color=GREEN&style=plastic"/>
+<img src="http://img.shields.io/static/v1?label=LANGUAGES&message=SWIFT&color=blue&style=plastic"/>
+<img src="http://img.shields.io/static/v1?label=PLATAFORM&message=IOS&color=lightgray&style=plastic"/>
+<img src="http://img.shields.io/static/v1?label=XCODE%20VERSION&message=13.3.1&color=red&style=plastic"/>
+<img src="http://img.shields.io/static/v1?label=SWIFT%20VERSION&message=5&color=purple&style=plastic"/>
+<img src="http://img.shields.io/static/v1?label=TARGET&message= IOS%2015.4&color=white&style=plastic"/>
 </p>
 
 
