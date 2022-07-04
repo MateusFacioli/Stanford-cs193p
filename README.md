@@ -9,7 +9,9 @@
 <img src="http://img.shields.io/static/v1?label=PLATAFORM&message=IOS&color=lightgray&style=plastic"/>
 <img src="http://img.shields.io/static/v1?label=XCODE%20VERSION&message=13.3.1&color=red&style=plastic"/>
 <img src="http://img.shields.io/static/v1?label=SWIFT%20VERSION&message=5&color=purple&style=plastic"/>
-<img src="http://img.shields.io/static/v1?label=TARGET&message= IOS%2015.4&color=white&style=plastic"/>
+<img src="http://img.shields.io/static/v1?label=TARGET&message=IOS%2015.4&color=white&style=plastic"/>
+<img src="http://img.shields.io/static/v1?label=ARCHITECTURE&message=MVVM&color=orange&style=plastic"/>
+<img src="http://img.shields.io/static/v1?label=FRAMEWORK&message=SWIFTUI&color=black&style=plastic"/>
 </p>
 
 
