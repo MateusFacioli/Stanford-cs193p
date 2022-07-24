@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC35A415287FB9F6006ABDA5 /* MemoryGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35A414287FB9F6006ABDA5 /* MemoryGameModel.swift */; };
+		DC35A417287FBC43006ABDA5 /* EmojiMemoryGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35A416287FBC43006ABDA5 /* EmojiMemoryGameViewModel.swift */; };
 		DC6688482870BE6200563A92 /* StanfordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6688472870BE6200563A92 /* StanfordApp.swift */; };
 		DC66884A2870BE6200563A92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6688492870BE6200563A92 /* ContentView.swift */; };
 		DC66884C2870BE6300563A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC66884B2870BE6300563A92 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC35A414287FB9F6006ABDA5 /* MemoryGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameModel.swift; sourceTree = "<group>"; };
+		DC35A416287FBC43006ABDA5 /* EmojiMemoryGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameViewModel.swift; sourceTree = "<group>"; };
 		DC6688442870BE6200563A92 /* Stanford.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stanford.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC6688472870BE6200563A92 /* StanfordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanfordApp.swift; sourceTree = "<group>"; };
 		DC6688492870BE6200563A92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 		DC6688462870BE6200563A92 /* Stanford */ = {
 			isa = PBXGroup;
 			children = (
+				DC35A414287FB9F6006ABDA5 /* MemoryGameModel.swift */,
+				DC35A416287FBC43006ABDA5 /* EmojiMemoryGameViewModel.swift */,
 				DC6688472870BE6200563A92 /* StanfordApp.swift */,
 				DC6688492870BE6200563A92 /* ContentView.swift */,
 				DC66884B2870BE6300563A92 /* Assets.xcassets */,
@@ -257,6 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC35A417287FBC43006ABDA5 /* EmojiMemoryGameViewModel.swift in Sources */,
+				DC35A415287FB9F6006ABDA5 /* MemoryGameModel.swift in Sources */,
 				DC66884A2870BE6200563A92 /* ContentView.swift in Sources */,
 				DC6688482870BE6200563A92 /* StanfordApp.swift in Sources */,
 			);
