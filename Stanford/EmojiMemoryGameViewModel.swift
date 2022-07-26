@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-class EmojiMemoryGameViewModel {
+class EmojiMemoryGameViewModel: ObservableObject { // scream that something has changed
 static let emojis = ["✈️", "🚢", "🚁", "🚘", "🛺", "🏎", "🚑", "🚟", "🚀", "🛴", "🚲", "🛵", "🏍", "🚂", "⛵️", "🚤"]
     // static = global
 
@@ -18,11 +18,18 @@ static let emojis = ["✈️", "🚢", "🚁", "🚘", "🛺", "🏎", "🚑", "
         }
     }
     
-    private var model: MemoryGameModel<String> = createMemoryGame()
+    @Published private var model: MemoryGameModel<String> = createMemoryGame()
+    //@published calls the objectWillChange.send()
         
     // full private access, need to access it some other way
     
-    var card: Array<MemoryGameModel<String>.Card> {
-        return model.cards
+    var cards: Array<MemoryGameModel<String>.Card> {
+         model.cards
+    }
+    
+    //MARK: - Intents
+    
+    func choose(_ card: MemoryGameModel<String>.Card) {
+        model.choose(card)
     }
 }
