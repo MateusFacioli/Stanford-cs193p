@@ -9,27 +9,27 @@ import SwiftUI
 
 
 class EmojiMemoryGameViewModel: ObservableObject { // scream that something has changed
-static let emojis = ["✈️", "🚢", "🚁", "🚘", "🛺", "🏎", "🚑", "🚟", "🚀", "🛴", "🚲", "🛵", "🏍", "🚂", "⛵️", "🚤"]
+private static let emojis = ["✈️", "🚢", "🚁", "🚘", "🛺", "🏎", "🚑", "🚟", "🚀", "🛴", "🚲", "🛵", "🏍", "🚂", "⛵️", "🚤"]
     // static = global
-
-    static func createMemoryGame()  -> MemoryGameModel<String> {
+ typealias Card = MemoryGameModel<String>.Card
+    private static func createMemoryGame()  -> MemoryGameModel<String> {
         MemoryGameModel<String>(numberOfPairsOfCards: 4) { pairIndex in
             emojis[pairIndex]
         }
     }
     
-    @Published private var model: MemoryGameModel<String> = createMemoryGame()
+    @Published private var model = createMemoryGame()
     //@published calls the objectWillChange.send()
         
     // full private access, need to access it some other way
     
-    var cards: Array<MemoryGameModel<String>.Card> {
+    var cards: Array<Card> {
          model.cards
     }
     
     //MARK: - Intents
     
-    func choose(_ card: MemoryGameModel<String>.Card) {
+    func choose(_ card: Card) {
         model.choose(card)
     }
 }
