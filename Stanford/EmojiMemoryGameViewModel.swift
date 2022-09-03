@@ -13,7 +13,7 @@ private static let emojis = ["✈️", "🚢", "🚁", "🚘", "🛺", "🏎", "
     // static = global
  typealias Card = MemoryGameModel<String>.Card
     private static func createMemoryGame()  -> MemoryGameModel<String> {
-        MemoryGameModel<String>(numberOfPairsOfCards: 4) { pairIndex in
+        MemoryGameModel<String>(numberOfPairsOfCards: 10) { pairIndex in
             emojis[pairIndex]
         }
     }

@@ -16,6 +16,8 @@
 		DC6688592870BE6300563A92 /* StanfordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6688582870BE6300563A92 /* StanfordTests.swift */; };
 		DC6688632870BE6300563A92 /* StanfordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6688622870BE6300563A92 /* StanfordUITests.swift */; };
 		DC6688652870BE6300563A92 /* StanfordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6688642870BE6300563A92 /* StanfordUITestsLaunchTests.swift */; };
+		DC7447A928C3F6EF009DA409 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7447A828C3F6EF009DA409 /* Pie.swift */; };
+		DC744D9528BAAE6300D55AE4 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC744D9428BAAE6300D55AE4 /* AspectVGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		DC66885E2870BE6300563A92 /* StanfordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StanfordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC6688622870BE6300563A92 /* StanfordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanfordUITests.swift; sourceTree = "<group>"; };
 		DC6688642870BE6300563A92 /* StanfordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanfordUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DC7447A828C3F6EF009DA409 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
+		DC744D9428BAAE6300D55AE4 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 				DC35A414287FB9F6006ABDA5 /* MemoryGameModel.swift */,
 				DC35A416287FBC43006ABDA5 /* EmojiMemoryGameViewModel.swift */,
 				DC6688472870BE6200563A92 /* StanfordApp.swift */,
+				DC744D9428BAAE6300D55AE4 /* AspectVGrid.swift */,
 				DC6688492870BE6200563A92 /* EmojiMemoryGameView.swift */,
+				DC7447A828C3F6EF009DA409 /* Pie.swift */,
 				DC66884B2870BE6300563A92 /* Assets.xcassets */,
 				DC66884D2870BE6300563A92 /* Preview Content */,
 			);
@@ -263,9 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7447A928C3F6EF009DA409 /* Pie.swift in Sources */,
 				DC35A417287FBC43006ABDA5 /* EmojiMemoryGameViewModel.swift in Sources */,
 				DC35A415287FB9F6006ABDA5 /* MemoryGameModel.swift in Sources */,
 				DC66884A2870BE6200563A92 /* EmojiMemoryGameView.swift in Sources */,
+				DC744D9528BAAE6300D55AE4 /* AspectVGrid.swift in Sources */,
 				DC6688482870BE6200563A92 /* StanfordApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
