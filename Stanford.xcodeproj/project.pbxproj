@@ -18,6 +18,7 @@
 		DC6688652870BE6300563A92 /* StanfordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6688642870BE6300563A92 /* StanfordUITestsLaunchTests.swift */; };
 		DC7447A928C3F6EF009DA409 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7447A828C3F6EF009DA409 /* Pie.swift */; };
 		DC744D9528BAAE6300D55AE4 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC744D9428BAAE6300D55AE4 /* AspectVGrid.swift */; };
+		DC8478C428C56B07009F25B8 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8478C328C56B07009F25B8 /* Cardify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		DC6688642870BE6300563A92 /* StanfordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanfordUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DC7447A828C3F6EF009DA409 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		DC744D9428BAAE6300D55AE4 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
+		DC8478C328C56B07009F25B8 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				DC744D9428BAAE6300D55AE4 /* AspectVGrid.swift */,
 				DC6688492870BE6200563A92 /* EmojiMemoryGameView.swift */,
 				DC7447A828C3F6EF009DA409 /* Pie.swift */,
+				DC8478C328C56B07009F25B8 /* Cardify.swift */,
 				DC66884B2870BE6300563A92 /* Assets.xcassets */,
 				DC66884D2870BE6300563A92 /* Preview Content */,
 			);
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC7447A928C3F6EF009DA409 /* Pie.swift in Sources */,
+				DC8478C428C56B07009F25B8 /* Cardify.swift in Sources */,
 				DC35A417287FBC43006ABDA5 /* EmojiMemoryGameViewModel.swift in Sources */,
 				DC35A415287FB9F6006ABDA5 /* MemoryGameModel.swift in Sources */,
 				DC66884A2870BE6200563A92 /* EmojiMemoryGameView.swift in Sources */,
