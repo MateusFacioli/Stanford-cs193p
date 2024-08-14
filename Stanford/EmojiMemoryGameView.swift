@@ -165,8 +165,8 @@ struct CardView: View {
                 .opacity(0.5)
                 Text(card.content)
                 //MARK: IMPLICIT ANIMATION
-                    .rotationEffect(Angle(degrees: card.isMatched ? 360: 0))// somente quando match
-                    .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
+                    .rotationEffect(Angle(degrees: card.isMatched ? 360 * 3: 0))// somente quando match
+                    .animation(Animation.linear(duration: 1))
                     .font(Font.system(size: DrawingConstants.fontSize))
                     .scaleEffect(scale(thatFits: geometry.size))
             }
