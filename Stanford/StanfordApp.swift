@@ -12,7 +12,7 @@ struct StanfordApp: App {
     private let game = EmojiMemoryGameViewModel()
     var body: some Scene {
         WindowGroup {
-            EmojiMemoryGameView(viewModel: game)
+            EmojiMemoryGameView(GameViewModel: game)
         }
     }
 }

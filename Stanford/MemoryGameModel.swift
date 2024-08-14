@@ -50,7 +50,6 @@ struct MemoryGameModel<CardContent> where CardContent: Equatable {
     }
     
     mutating func choose(_ card: Card) {
-//        if let chosenIndex = index(of: card) {
         if let chosenIndex = cards.firstIndex(where: { $0.id == card.id}), //function programming
             !cards[chosenIndex].isFaceUp,
             !cards[chosenIndex].isMatched
@@ -66,7 +65,7 @@ struct MemoryGameModel<CardContent> where CardContent: Equatable {
             }
         }
     }
-    //this function have been replaced by called in choose function
+    //MARK: OLD FUNCTION -have been replaced by choose function 
 //    func index(of card: Card) -> Int? { //external and internal name of parameter
 //        for index in 0..<cards.count {
 //            if cards[index].id == card.id {
@@ -76,6 +75,10 @@ struct MemoryGameModel<CardContent> where CardContent: Equatable {
 //        return nil
 //    }
     
+    mutating func shuffle() {
+        cards.shuffle()
+    }
+    
     init(numberOfPairsOfCards: Int, createCardContent: (Int) -> CardContent) {
         cards = [] //Array<Card>()
         for pairIndex in 0..<numberOfPairsOfCards {
@@ -83,20 +86,83 @@ struct MemoryGameModel<CardContent> where CardContent: Equatable {
             cards.append(Card(content: content, id: pairIndex * 2))
             cards.append(Card(content: content, id: pairIndex * 2 + 1))
         }
+        cards.shuffle()
     }
     
     struct Card: Identifiable {
-        var isFaceUp = false
-        var isMatched = false
+        var isFaceUp = false {
+            didSet {//props observer
+                if isFaceUp {
+                    startUsingBonusTime()
+                } else {
+                    stopUsingBonusTime()
+                }
+            }
+        }
+        var isMatched = false {
+            didSet {
+                stopUsingBonusTime()
+            }
+        }
         let content: CardContent
         let id: Int // it can be whatever you want
+        
+        // MARK: - Bonus Time
+        // if the user matches the card before a certain amount of time passes during which the card is face up
+
+        
+        var bonusTimeLimit: TimeInterval = 6// can be zero which means "no bonus available" for this card
+        var lastFaceUpDate: Date?// the last time this card was turned face up (and is still face up)
+        var pastFaceUpTime: TimeInterval = 0 // the accumulated time this card has been face up in the past
+        // (i.e. not including the current time it's been face up if it is currently so)
+        
+        // how long this card has ever been face up
+        private var faceUpTime: TimeInterval {
+            if let lastFaceUpDate = self.lastFaceUpDate {
+                return pastFaceUpTime + Date().timeIntervalSince(lastFaceUpDate)
+            } else {
+                return pastFaceUpTime
+            }
+        }
+        
+        
+        
+        var bonusTimeRemaining: TimeInterval { // how much time left before the bonus opportunity runs out
+            max(0, bonusTimeLimit - faceUpTime)
+        }
+       
+        var bonusRemaining: Double { // percentage of the bonus time remaining
+            (bonusTimeLimit > 0 && bonusTimeRemaining > 0) ? bonusTimeRemaining/bonusTimeLimit : 0
+        }
+       
+        var hasEarnedBonus: Bool {  // whether the card was matched during the bonus time period
+            isMatched && bonusTimeRemaining > 0
+        }
+       
+        var isConsumingBonusTime: Bool {  // whether we are currently face up, unmatched and have not yet used up the bonus window
+            isFaceUp && !isMatched && bonusTimeRemaining > 0
+        }
+        
+        
+        private mutating func startUsingBonusTime() { // called when the card transitions to face up state
+            if isConsumingBonusTime, lastFaceUpDate == nil {
+                lastFaceUpDate = Date()
+            }
+        }
+        
+        private mutating func stopUsingBonusTime() { // called when the card goes back face down (or gets matched)
+            pastFaceUpTime = faceUpTime
+            self.lastFaceUpDate = nil
+        }
+        
+        
     }
 }
 
 extension  Array { // if have one element return it if have more return nil
     var oneAndOnly: Element? {
-        if  count == 1 { //self.count == 1 {
-           return first //return self.first
+        if  count == 1 {
+           return first
         } else {
             return nil
         }

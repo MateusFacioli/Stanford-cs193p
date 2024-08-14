@@ -32,4 +32,15 @@ private static let emojis = ["✈️", "🚢", "🚁", "🚘", "🛺", "🏎", "
     func choose(_ card: Card) {
         model.choose(card)
     }
+    
+    func shuffle() {
+        model.shuffle()
+    }
+    
+    func restart() {
+        model = EmojiMemoryGameViewModel.createMemoryGame()
+    }
 }
+
+
+//add function and button shuffle
