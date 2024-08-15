@@ -1,6 +1,7 @@
 ## Título e Imagem de capa
 
 <h2> Memory game app using SwiftUI This project has been created in CS193p lecture of Stanford.</h2>
+<p>  Each branch will be a project</p>
 <p align = "center"> <img width="525" alt="Course Logo" src="https://user-images.githubusercontent.com/15366184/177063597-f209f0fb-9271-4933-ba64-48d6264f496a.png"></p>
 
 ## Badges
